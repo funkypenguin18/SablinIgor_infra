@@ -20,3 +20,30 @@ bastion_IP = 104.155.5.163
 
 someinternalhost_IP = 10.132.0.30
 
+## Homework IV. Деплой тестового приложения.
+
+testapp_IP = 104.155.5.163
+testapp_port = 9292
+
+Запуск VM с установочным скриптом
+
+<pre>
+gcloud compute instances create reddit-app\
+  --boot-disk-size=10GB \
+  --image-family ubuntu-1604-lts \
+  --image-project=ubuntu-os-cloud \
+  --machine-type=g1-small \
+  --tags puma-server \
+  --restart-on-failure \
+  --metadata-from-file startup-script=startup-script.sh
+  </pre>
+
+Настройка firewall rule через gcloud
+
+<pre>
+gcloud compute firewall-rules create default-puma-server --allow tcp:9292 \
+      --description "Allow incoming traffic on TCP port 9292 (puma server)" \
+      --source-ranges="0.0.0.0/0" \
+      --target-tags=«puma-server»
+      --direction INGRESS
+</pre>
