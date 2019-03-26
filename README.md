@@ -22,7 +22,7 @@ someinternalhost_IP = 10.132.0.30
 
 ## Homework IV. Деплой тестового приложения.
 
-testapp_IP = 104.155.5.163
+testapp_IP = 35.195.22.179
 testapp_port = 9292
 
 Запуск VM с установочным скриптом
