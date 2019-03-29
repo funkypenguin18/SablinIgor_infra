@@ -22,7 +22,7 @@ someinternalhost_IP = 10.132.0.30
 
 ## Homework IV. Деплой тестового приложения.
 
-testapp_IP = 35.195.22.179
+testapp_IP = 34.76.238.7
 testapp_port = 9292
 
 Запуск VM с установочным скриптом
@@ -63,3 +63,35 @@ gcloud compute firewall-rules create default-puma-server --allow tcp:9292 \
 
 ## Как проверить работоспособность:
  - Например, перейти по ссылке http://35.195.22.179:9292
+
+# Выполнено ДЗ №6
+
+## Ssh keys management
+При управлении ssh-ключами через terraform неоходимо помнить о том, что, ключи, добавленные вручную через UI, будут удалены при выполнении очередного terraform apply.
+
+Пример добавления нескольких ключей в проектную область
+
+<pre>
+resource "google_compute_project_metadata" "ssh_keys" {
+  metadata {
+    ssh-keys = "appuser5:${file(var.public_key_path)}\nappuser6:${file(var.public_key_path)}"
+  }
+}
+</pre>
+
+## Балансировка приложения
+Добавить еще один инстанс приложения возможно через дублирование ресурса google_compute_instance. Однако, это приводит к излишнему дублированию кода и дополнительной настройки балансировщика.
+
+Более предпочтительно использовать свойство count с указанием необходимого числа инстансов.
+
+## Использованные источники
+
+https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html
+
+https://stackoverflow.com/questions/49137361/how-to-use-project-wide-ssh-keys-with-terraform
+
+https://qiita.com/sonots/items/6982b7bd9366ca7b98fd
+
+https://cloud.google.com/load-balancing/docs/forwarding-rules
+
+https://www.terraform.io/docs/providers/google/r/compute_health_check.html
