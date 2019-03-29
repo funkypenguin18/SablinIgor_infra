@@ -78,3 +78,9 @@ resource "google_compute_project_metadata" "ssh_keys" {
   }
 }
 </pre>
+
+Использованные источники
+
+https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html
+https://stackoverflow.com/questions/49137361/how-to-use-project-wide-ssh-keys-with-terraform
+https://qiita.com/sonots/items/6982b7bd9366ca7b98fd
