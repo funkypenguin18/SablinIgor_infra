@@ -63,3 +63,18 @@ gcloud compute firewall-rules create default-puma-server --allow tcp:9292 \
 
 ## Как проверить работоспособность:
  - Например, перейти по ссылке http://35.195.22.179:9292
+
+# Выполнено ДЗ №6
+
+## Ssh keys management
+При управлении ssh-ключами через terraform неоходимо помнить о том, что, ключи, добавленные вручную через UI, будут удалены при выполнении очередного terraform apply.
+
+Пример добавления нескольких ключей в проектную область
+
+<pre>
+resource "google_compute_project_metadata" "ssh_keys" {
+  metadata {
+    ssh-keys = "appuser5:${file(var.public_key_path)}\nappuser6:${file(var.public_key_path)}"
+  }
+}
+</pre>

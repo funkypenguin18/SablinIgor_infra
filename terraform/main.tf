@@ -1,6 +1,5 @@
 terraform {
-  # Версия terraform
-  # required_version = "0.11.7"
+  # Версия terraform  # required_version = "0.11.7"
 }
 
 provider "google" {
@@ -75,4 +74,10 @@ resource "google_compute_firewall" "firewall_puma" {
 
   # Правило применимо для инстансов с перечисленными тэгами
   target_tags = ["reddit-app"]
+}
+
+resource "google_compute_project_metadata" "ssh_keys" {
+  metadata {
+    ssh-keys = "appuser5:${file(var.public_key_path)}\nappuser6:${file(var.public_key_path)}"
+  }
 }
