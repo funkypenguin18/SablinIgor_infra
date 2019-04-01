@@ -95,3 +95,23 @@ https://qiita.com/sonots/items/6982b7bd9366ca7b98fd
 https://cloud.google.com/load-balancing/docs/forwarding-rules
 
 https://www.terraform.io/docs/providers/google/r/compute_health_check.html
+
+# Выполнено ДЗ №7
+
+## Использованные источники
+
+https://stackoverflow.com/questions/46618068/deploy-gcp-instance-using-terraform-and-count-with-attached-disk
+
+https://serverfault.com/questions/737242/google-container-engine-kubernetes-1-1-1-service-loadbalancer-not-being-crea
+
+https://www.terraform.io/docs/providers/google/r/compute_address.html
+
+https://learn.hashicorp.com/terraform/getting-started/dependencies.html
+
+https://www.youtube.com/watch?v=dMzY3GiJPiY
+
+https://devopscube.com/setup-google-provider-backend-terraform/
+
+https://serverfault.com/questions/413397/how-to-set-environment-variable-in-systemd-service
+
+https://github.com/hashicorp/terraform/issues/14290

@@ -32,4 +32,24 @@ variable disk_image {
 
 variable "node_count" {
   default = "2"
- }
+}
+
+variable app_disk_image {
+  description = "Disk image for reddit app"
+  default     = "reddit-ruby"
+}
+
+variable db_disk_image {
+  description = "Disk image for reddit db"
+  default     = "reddit-db"
+}
+
+variable input_port {
+  description = "Порт для входищих соединений"
+}
+
+variable source_tag_name {
+  description = "Тэг сети для входящих соединений"
+
+  #default     = "reddit-app"
+}
