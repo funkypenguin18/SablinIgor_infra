@@ -1,4 +1,3 @@
-
 variable "db_address" {
   description = "Database IP"
 }

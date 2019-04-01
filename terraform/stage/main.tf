@@ -1,6 +1,6 @@
 terraform {
   # Версия terraform  # required_version = "0.11.7"
-    backend "gcs" {
+  backend "gcs" {
     bucket = "tfstate-reddit-app"
     prefix = "stage"
   }
@@ -29,9 +29,9 @@ module "vpc" {
 }
 
 module "app" {
-  source          = "../modules/app"
-  public_key_path = "${var.public_key_path}"
+  source           = "../modules/app"
+  public_key_path  = "${var.public_key_path}"
   private_key_path = "${var.private_key_path}"
-  app_disk_image  = "${var.app_disk_image}"
-  db_address = "${module.db.db_external_ip}:${var.input_port}"
+  app_disk_image   = "${var.app_disk_image}"
+  db_address       = "${module.db.db_external_ip}:${var.input_port}"
 }
