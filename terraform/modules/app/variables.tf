@@ -1,5 +1,6 @@
 variable "db_address" {
   description = "Database IP"
+  default     = "127.0.0.1"
 }
 
 variable public_key_path {
