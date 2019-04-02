@@ -15,13 +15,6 @@ provider "google" {
   region  = "${var.region}"
 }
 
-module "app" {
-  source          = "../modules/app"
-  public_key_path = "${var.public_key_path}"
-  private_key_path = "${var.private_key_path}"
-  app_disk_image  = "${var.app_disk_image}"
-}
-
 module "db" {
   source          = "../modules/db"
   public_key_path = "${var.public_key_path}"
@@ -32,5 +25,13 @@ module "vpc" {
   source            = "../modules/vpc"
   input_port        = "${var.input_port}"
   source_tag_name   = "${var.source_tag_name}"
-  ssh_source_ranges = ["82.155.222.156/32"]
+  ssh_source_ranges = ["91.77.222.225/32"]
+}
+
+module "app" {
+  source          = "../modules/app"
+  public_key_path = "${var.public_key_path}"
+  private_key_path = "${var.private_key_path}"
+  app_disk_image  = "${var.app_disk_image}"
+  db_address       = "${module.db.db_external_ip}:27017"
 }
