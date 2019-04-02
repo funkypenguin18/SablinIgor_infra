@@ -54,4 +54,8 @@ resource "google_compute_instance" "app" {
     content     = "${data.template_file.servive.rendered}"
     destination = "/tmp/puma.service"
   }
+
+    provisioner "remote-exec" {
+    script = "../../files/deploy.sh"
+  }
 }
