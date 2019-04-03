@@ -9,13 +9,13 @@
         {
             "type": "googlecompute",
             "project_id": "{{user `project_id`}}",
-            "image_name": "reddit-base-{{timestamp}}",
-            "image_family": "reddit-base",
+            "image_name": "reddit-ruby-{{timestamp}}",
+            "image_family": "reddit-ruby",
             "source_image_family": "{{user `source_image_family`}}",
             "zone": "europe-west1-b",
             "ssh_username": "appuser",
             "machine_type": "{{user `machine_type`}}",
-            "image_description": "My first reddit-app image!",
+            "image_description": "Ruby image for reddit app!",
             "disk_size": 11,
             "disk_type": "pd-standard",
             "network": "default"
@@ -26,11 +26,6 @@
         {
             "type": "shell",
             "script": "scripts/install_ruby.sh",
-            "execute_command": "sudo {{.Path}}"
-        },
-        {
-            "type": "shell",
-            "script": "scripts/install_mongodb.sh",
             "execute_command": "sudo {{.Path}}"
         }
     ]
