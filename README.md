@@ -126,3 +126,9 @@ https://devopscube.com/setup-google-provider-backend-terraform/
 https://serverfault.com/questions/413397/how-to-set-environment-variable-in-systemd-service
 
 https://github.com/hashicorp/terraform/issues/14290
+
+# Выполнено ДЗ №7
+
+## В процессе сделано:
+
+- в случае внесения изменений указывается changed
