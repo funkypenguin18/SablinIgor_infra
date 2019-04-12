@@ -7,4 +7,3 @@ db:
   hosts:
     dbserver:
       ansible_host: 35.195.247.168
-      
