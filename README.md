@@ -127,7 +127,7 @@ https://serverfault.com/questions/413397/how-to-set-environment-variable-in-syst
 
 https://github.com/hashicorp/terraform/issues/14290
 
-# Выполнено ДЗ №7
+# Выполнено ДЗ №8
 
 ## В процессе сделано:
 
