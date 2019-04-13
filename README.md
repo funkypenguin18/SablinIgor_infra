@@ -126,3 +126,37 @@ https://devopscube.com/setup-google-provider-backend-terraform/
 https://serverfault.com/questions/413397/how-to-set-environment-variable-in-systemd-service
 
 https://github.com/hashicorp/terraform/issues/14290
+
+# Выполнено ДЗ №8
+
+## В процессе сделано:
+
+- Реализованы три формата статического инвентаря:
+  - INI: inventory
+  - YAML: inventory.yml
+  - JSON: inventory.json
+- Реализован плейбук для копирования из git исходного кода на сервера приложений
+- Реалзиован скрипт для формирования динамического инвентори:
+  - имя скрипта: gcp_inv.py
+  - реализован на Python
+  - используется модуль googleapiclient для получения информации с GCE
+  - в качестве имени группы хостов используется network tag (допущение: он должен быть один)
+  - так как используемого модуля нет на Trevis в конфигурации ансибла по-умолчанию используется статический инвентори
+
+## Использованные источники
+
+https://cloud.google.com/python/
+
+https://cloud.google.com/docs/authentication/getting-started
+
+https://cloud.google.com/compute/docs/reference/rest/v1/instances/list
+
+https://www.jeffgeerling.com/blog/creating-custom-dynamic-inventories-ansible
+
+https://stackoverflow.com/questions/16333296/how-do-you-create-nested-dict-in-python
+
+https://www.oreilly.com/library/view/python-cookbook/0596001673/ch01s06.html
+
+https://stackoverflow.com/questions/10589620/syntaxerror-non-ascii-character-xa3-in-file-when-function-returns-%C2%A3
+
+
