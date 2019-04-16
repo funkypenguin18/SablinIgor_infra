@@ -164,6 +164,14 @@ https://stackoverflow.com/questions/10589620/syntaxerror-non-ascii-character-xa3
 
 ## В процессе сделано:
 
+- Работа с одним плейбуком
+- Работа с несколькими плейбуками
+- Использование dynamic inventory при помощи плагина ansible - gcp_compute (предпочел использовать его так как этот инструмент является для ansible целевым и не потребует скачивания дополнительных скриптов)
+- При сборке packer-ом используется provisioner ansible
+
+## Как проверить работоспособность:
+ - Например, перейти по ссылке http://35.195.22.179:9292
+ 
 ## Использованные источники
 
 https://michaelheap.com/ansible-importerror-no-module-named-ansible-playbook/
