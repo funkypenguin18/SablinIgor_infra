@@ -160,3 +160,10 @@ https://www.oreilly.com/library/view/python-cookbook/0596001673/ch01s06.html
 https://stackoverflow.com/questions/10589620/syntaxerror-non-ascii-character-xa3-in-file-when-function-returns-%C2%A3
 
 
+# Выполнено ДЗ №8
+
+## В процессе сделано:
+
+## Использованные источники
+
+https://michaelheap.com/ansible-importerror-no-module-named-ansible-playbook/
