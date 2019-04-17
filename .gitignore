@@ -6,3 +6,8 @@ variables.json
 *.tfvars
 .terraform/
 
+env/
+
+*.retry
+
+infra*.json

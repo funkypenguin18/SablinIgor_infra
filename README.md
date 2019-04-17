@@ -160,3 +160,18 @@ https://www.oreilly.com/library/view/python-cookbook/0596001673/ch01s06.html
 https://stackoverflow.com/questions/10589620/syntaxerror-non-ascii-character-xa3-in-file-when-function-returns-%C2%A3
 
 
+# Выполнено ДЗ №9
+
+## В процессе сделано:
+
+- Работа с одним плейбуком
+- Работа с несколькими плейбуками
+- Использование dynamic inventory при помощи плагина ansible - gcp_compute (предпочел использовать его так как этот инструмент является для ansible целевым и не потребует скачивания дополнительных скриптов)
+- При сборке packer-ом используется provisioner ansible
+
+## Как проверить работоспособность:
+ - Например, перейти по ссылке http://35.240.81.22:9292
+
+## Использованные источники
+
+https://michaelheap.com/ansible-importerror-no-module-named-ansible-playbook/
