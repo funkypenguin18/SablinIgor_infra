@@ -1,0 +1,13 @@
+plugin: gcp_compute
+zones: # populate inventory with instances in these regions
+  - europe-west1-b
+projects:
+  - infra-234615
+keyed_groups:
+  - key: tags['items']
+    separator: ''
+filters: null
+scopes:
+  - https://www.googleapis.com/auth/compute
+service_account_file: ../infra-234615-9e270e79d2c8.json
+auth_kind: serviceaccount
