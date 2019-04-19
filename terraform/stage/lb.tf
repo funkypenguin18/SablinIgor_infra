@@ -1,6 +1,6 @@
 resource "google_compute_http_health_check" "reddit_healthcheck" {
   name               = "reddit-healthcheck"
-  port               = "9292"
+  port               = "80"
   timeout_sec        = 1
   check_interval_sec = 1
 }
@@ -22,5 +22,5 @@ resource "google_compute_forwarding_rule" "reddit_forwarding_rule" {
 
   target = "${google_compute_target_pool.reddit_pool.self_link}"
 
-  port_range = "9292"
+  port_range = "80"
 }
