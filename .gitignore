@@ -13,3 +13,5 @@ env/
 infra*.json
 
 jdauphant.nginx
+
+vault.key
