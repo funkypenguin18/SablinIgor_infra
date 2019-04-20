@@ -1,9 +1,21 @@
 dist: trusty
 sudo: required
 language: bash
+
+branches:
+  only:
+    - master
+
+env:
+  - EXPRESS42=yes
+  - EXPRESS42=no
+
 before_install:
-- curl https://raw.githubusercontent.com/express42/otus-homeworks/2019-02/run.sh |
-  bash
+- if [[ "${EXPRESS42}" == "yes" ]]; then curl https://raw.githubusercontent.com/express42/otus-homeworks/2019-02/run.sh |
+  bash; fi
+- if [[ "${EXPRESS42}" == "no" ]]; then curl https://raw.githubusercontent.com/SablinIgor/otus-homeworks/master/express42/run.sh |
+  bash; fi
+
 notifications:
   slack:
     rooms:

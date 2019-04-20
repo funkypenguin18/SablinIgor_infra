@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/otus-devops-2019-02/SablinIgor_infra.svg?branch=ansible-3)](https://travis-ci.org/otus-devops-2019-02/SablinIgor_infra)
+
 # SablinIgor_infra
 
 Подключения к someinternalhost в одну команду: ssh -At -i ~/.ssh/ubuntu -A ubuntu@35.233.72.169 ssh 10.132.0.3
@@ -175,3 +177,34 @@ https://stackoverflow.com/questions/10589620/syntaxerror-non-ascii-character-xa3
 ## Использованные источники
 
 https://michaelheap.com/ansible-importerror-no-module-named-ansible-playbook/
+
+# Выполнено ДЗ №10 
+
+## В процессе сделано:
+
+- Cозданные ранее плейбуки перенесены в раздельные роли
+- Описаны два окружения - prod и stage
+- Использована коммьюнити роль nginx (обращение к 80-му порту)
+- Использована технология Ansible Vault для создания дополнительных пользователей
+- Настроены тесты Travis
+  - для тестов создан внешний репозиторий https://github.com/SablinIgor/trytravis-otus-devops-work
+  - реализованы тесты "packer validate"
+  - реализованы тесты "terraform validate и tflint"
+  - реализованы тесты "ansible-lint"
+  - в файле .travis.yml при помощи matrix expansion выполнение тестов express42 и собственных выполняется параллельно
+  - в файле README.md отображается бейдж с статусом билда для ветки master
+
+## Как проверить работоспособность:
+ - Например, перейти по ссылке http://104.155.70.242
+
+## Использованные источники 
+
+https://eng.localytics.com/best-practices-and-common-mistakes-with-travis-ci/
+
+https://docs.travis-ci.com/user/multi-os/
+
+https://github.com/drhelius/travis-ansible-demo/blob/master/.travis.yml
+
+https://www.baeldung.com/travis-ci-build-pipeline
+
+https://habr.com/ru/company/southbridge/blog/310278/
