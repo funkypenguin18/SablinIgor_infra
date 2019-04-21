@@ -11,3 +11,7 @@ env/
 *.retry
 
 infra*.json
+
+jdauphant.nginx
+
+vault.key
