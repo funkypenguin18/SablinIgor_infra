@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/otus-devops-2019-02/SablinIgor_infra.svg?branch=ansible-3)](https://travis-ci.org/otus-devops-2019-02/SablinIgor_infra)
+[![Build Status](https://travis-ci.org/otus-devops-2019-02/SablinIgor_infra.svg?branch=master)](https://travis-ci.org/otus-devops-2019-02/SablinIgor_infra)
 
 # SablinIgor_infra
 
