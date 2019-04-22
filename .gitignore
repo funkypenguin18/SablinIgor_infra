@@ -23,3 +23,5 @@ vault.key
 .molecule
 .cache
 .pytest_cache
+
+venv/

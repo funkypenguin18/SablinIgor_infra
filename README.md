@@ -208,3 +208,11 @@ https://github.com/drhelius/travis-ansible-demo/blob/master/.travis.yml
 https://www.baeldung.com/travis-ci-build-pipeline
 
 https://habr.com/ru/company/southbridge/blog/310278/
+
+
+# Выполнено ДЗ №11
+
+
+## Использованные источники 
+
+https://stackoverflow.com/questions/39964635/error-virtualenv-command-not-found-but-install-location-is-in-pythonpath?noredirect=1&lq=1
