@@ -2,10 +2,6 @@ dist: trusty
 sudo: required
 language: bash
 
-branches:
-  only:
-    - master
-
 env:
   - EXPRESS42=yes
   - EXPRESS42=no

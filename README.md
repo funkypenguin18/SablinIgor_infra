@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/otus-devops-2019-02/SablinIgor_infra.svg?branch=ansible-3)](https://travis-ci.org/otus-devops-2019-02/SablinIgor_infra)
+[![Build Status](https://travis-ci.org/otus-devops-2019-02/SablinIgor_infra.svg?branch=master)](https://travis-ci.org/otus-devops-2019-02/SablinIgor_infra)
 
 # SablinIgor_infra
 
@@ -208,3 +208,19 @@ https://github.com/drhelius/travis-ansible-demo/blob/master/.travis.yml
 https://www.baeldung.com/travis-ci-build-pipeline
 
 https://habr.com/ru/company/southbridge/blog/310278/
+
+
+# Выполнено ДЗ №11
+
+## В процессе сделано:
+
+- Настроена инфраструктура при помощи Vagrant
+- Доработаны плейбуки для использования в Vagrant-е
+- Плейбуки тестируются при помощи Molecule и
+Testinfra
+- Сборщик packer-а использует доработанные плейбуки
+- Конфигурация Vagrant-а доработана для использования nginx-прокси
+
+## Использованные источники 
+
+https://stackoverflow.com/questions/39964635/error-virtualenv-command-not-found-but-install-location-is-in-pythonpath?noredirect=1&lq=1
